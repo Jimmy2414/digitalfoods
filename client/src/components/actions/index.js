@@ -16,22 +16,24 @@ import {
 console.log(URLLOCALFOOD);
 export function getRecipesAll() {
   return function (dispatch) {
-    return fetch('/recipes')
-      .then(res => res.json())
-      .then(foods => dispatch({ type: GET_RECIPES, payload: foods }))
-      .catch(e => {
-        console.log(e);
-      });
-    //    return  axios.get(`${URLLOCALFOOD}/recipes`)
+    // return fetch('/recipes')
+    //   .then(res => res.json())
+    //   .then(foods => dispatch({ type: GET_RECIPES, payload: foods }))
+    //   .catch(e => {
+    //     console.log(e);
+    //   });
+    return axios
+      .get(`/recipes`)
 
-    //     .then((json) => {
-    //     return dispatch({
-    //         type: GET_RECIPES,
-    //         payload: json.data
-    //     })
-    // }).catch((error) => {
-    //     console.log(error)
-    // })
+      .then(json => {
+        return dispatch({
+          type: GET_RECIPES,
+          payload: json.data,
+        });
+      })
+      .catch(error => {
+        console.log(error);
+      });
   };
 }
 export function getTypes() {
