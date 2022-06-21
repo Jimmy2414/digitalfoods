@@ -1,0 +1,28 @@
+.search{
+    background-color: aliceblue;
+    border-radius: 20px;
+height: 24px;
+text-align: center;
+}
+.botonsearch{
+    border-radius: 20px;
+     border: 3px solid rgba(100, 100, 100, 0.1);
+     margin-bottom: 20px;
+     font-family: cursive;
+     color: #fff;
+     background-size: 300%;
+     background-image: linear-gradient(to left, #00B7DA, #171569, #00B7DA );
+     transition: 0.5s;
+     margin-left: 5px;
+     
+  
+  }
+  .botonsearch:hover{
+    box-shadow: 0 0 10px #1c2e3d, 0 0 40px #431fc5, 0 0 80px #2b353d;
+     border: solid 2px #2196f3 ;
+     font-family: cursive;
+     transition: 0.5s;
+     background-position: right;
+  
+     
+  } 

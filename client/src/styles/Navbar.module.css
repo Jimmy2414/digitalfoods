@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
+.nav {
+    display: flex;
+    justify-content: justify;
+    align-items: center;
+    margin: auto;
+    position: fixed;
+    top: 0;
+  
+    width: 100%;
+    background-image: linear-gradient(to left, rgba(255, 0, 0, 0), #2d1a15);
+    /* background-image: linear-gradient(to right, rgba(205, 5, 5, 0.452), rgba(255, 0, 0, 0)); */
+    z-index: 1000;
+  }
+  .filtercontainer{
+display: flex;
+flex-direction: row;
+width: 200px;
+margin-left: 8%;
+  }
+  
+  .a {
+    position: absolute;
+    float: right;
+    left: 90%;
+  }
+  
+  .a {
+    font-family: 'Water Brush', cursive;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 3px ;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-radius: 10px;
+    width: 100px;
+  }
+  
+  .a:hover {
+    background-color: rgba(220, 3, 3, 0.341);
+      color: rgb(5, 3, 0);
+      border-radius: 20px;
+    transition: all 0.2s ease;
+    border-bottom: solid 2px silver;
+    border-right: solid 2px silver;
+    border-radius:  20px ;
+    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.765);
+  }
+  
+  .filtros{
+      color: rgb(205, 205, 205);
+      background-color: rgba(0, 0, 0, 0.467);
+    text-align: center;
+    padding: 0px 20px 0px 20px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-radius: 10px;
+    margin-right: 5px;
+  }
+  .filtros:hover {
+    /* background-color: rgba(255, 255, 255, 0.341);
+      color: rgb(5, 3, 0);
+      border-radius: 20px; */
+    transition: all 0.2s ease;
+    border-bottom: solid 2px silver;
+    border-right: solid 2px silver;
+    border-radius:5px;
+    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.765);
+  }
+  .add{
+    background-color: rgba(17, 51, 17, 0.588);
+    color: aliceblue;
+    border-radius: 20px;
+  
+  }
+  .add:hover {
+    /* background-color: rgba(255, 255, 255, 0.341);
+      color: rgb(5, 3, 0);
+      border-radius: 20px; */
+    transition: all 0.2s ease;
+    border-bottom: solid 2px silver;
+    border-right: solid 2px silver;
+    border-radius:20px;
+    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.765);
+  }
+.divp{
+
+  width: 100px;
+  position: absolute;
+  float: right;
+  margin-left: 1%;
+}

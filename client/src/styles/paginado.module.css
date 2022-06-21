@@ -1,0 +1,30 @@
+.paginado{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    
+
+}
+.boton{
+    border: black 1px solid;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(72, 48, 12, 0.591);
+    transition: all 0.2s ease;
+    color: beige;
+    text-align: center;
+    
+}
+.boton:focus{
+    transform: scale(0.8);
+    background-color: rgba(142, 2, 2, 0.47);
+}
+
+
+.boton:hover {
+transform: scale(0.9);
+transition: all 0.2s ease;
+
+}
