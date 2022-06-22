@@ -7,19 +7,19 @@
 
 }
 .boton{
-    border: black 1px solid;
-    width: 35px;
+border: none;
+    width: 40px;
     height: 35px;
-    border-radius: 50%;
-    background-color: rgba(72, 48, 12, 0.591);
+    border-radius: 30%;
+    background-color: #f1f1f1;
     transition: all 0.2s ease;
-    color: beige;
+    color: rgb(0, 0, 0);
     text-align: center;
     
 }
 .boton:focus{
     transform: scale(0.8);
-    background-color: rgba(142, 2, 2, 0.47);
+    background-color: #ccae929a;
 }
 
 
@@ -27,4 +27,38 @@
 transform: scale(0.9);
 transition: all 0.2s ease;
 
+background-color: #ccae929a;
+color: white;
+
 }
+.start{
+    text-decoration: none;
+  display: inline-block;
+  border: black;
+  padding: 8px 14px;
+  background-color: #f1f1f1;
+  border-radius: 30%;
+
+}
+.start:hover {
+    background-color: #ddd;
+
+    background-color: #ccae929a;
+    color: white;
+  }
+  .finish{
+    text-decoration: none;
+  display: inline-block;
+  border: black;
+  padding: 8px 14px;
+  background-color: #ccae929a;
+color: black;
+  border-radius: 30%;
+
+}
+.finish:hover {
+    background-color: #ddd;
+    background-color: #f1f1f1;
+    
+    color: rgb(0, 0, 0);
+  }

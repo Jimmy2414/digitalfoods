@@ -6,6 +6,7 @@
   align-items: center;
   margin: auto;
 } */
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700|PT+Serif:400,400i,700');
 
 .total1{
    display: flex;
@@ -117,7 +118,7 @@ transition: 0.5s;
    border-radius: 20px;
 border: solid 0px rgba(0, 0, 128, 0);
    margin-bottom: 20px;
-   font-family: cursive;
+   font-family: 'PT Serif', serif;
    color: #fff;
    background-size: 300%;
    background-image: linear-gradient(to left, #423e3c, #61331d, #d5bcb5 );
@@ -140,15 +141,64 @@ border: solid 0px rgba(0, 0, 128, 0);
 
  .imagen1{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-background-image: url('../img/logoheader.jpg');
+
+background-image: url('../img/hero-bg03.jpg');
 background-position: center;
 background-size: cover;
-width: 500px;
+width: 90%px;
 height: 300px;
-margin-top: 100px;
-margin-bottom: -120px;
+box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.63);
+
+margin-bottom: -117px;
 
  }
+
+ 
+ .btn {
+     position: relative;
+     font-size: 12px;
+     
+     text-decoration: none;
+     padding: 0.6em 1.5em;
+     display: inline-block;
+     border-radius: 6em;
+     transition: all .2s;
+     border: none;
+     font-family: 'PT Serif', serif;
+     font-weight: 500;
+     color: black;
+     margin-left: 5px;
+     background-color: white;
+    }
+    
+    .btn:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .btn:active {
+     transform: translateY(-1px);
+     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .btn::after {
+     content: "";
+     display: inline-block;
+     height: 100%;
+     width: 100%;
+     border-radius: 100px;
+     position: absolute;
+     top: 0;
+     left: 0;
+     z-index: -1;
+     transition: all .4s;
+    }
+    
+    .btn::after {
+     background-color: #fff;
+    }
+    
+    .btn:hover::after {
+     transform: scaleX(1.4) scaleY(1.6);
+     opacity: 0;
+    }

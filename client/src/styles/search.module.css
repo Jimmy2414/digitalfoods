@@ -1,28 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700|PT+Serif:400,400i,700');
 .search{
     background-color: aliceblue;
     border-radius: 20px;
 height: 24px;
 text-align: center;
 }
-.botonsearch{
-    border-radius: 20px;
-     border: 3px solid rgba(100, 100, 100, 0.1);
-     margin-bottom: 20px;
-     font-family: cursive;
-     color: #fff;
-     background-size: 300%;
-     background-image: linear-gradient(to left, #00B7DA, #171569, #00B7DA );
-     transition: 0.5s;
-     margin-left: 5px;
-     
-  
-  }
-  .botonsearch:hover{
-    box-shadow: 0 0 10px #1c2e3d, 0 0 40px #431fc5, 0 0 80px #2b353d;
-     border: solid 2px #2196f3 ;
-     font-family: cursive;
-     transition: 0.5s;
-     background-position: right;
-  
-     
-  } 
+.btn {
+    position: relative;
+    font-size: 12px;
+    margin-left: 3px;
+    text-decoration: none;
+    padding: 0.6em 1.5em;
+    display: inline-block;
+    border-radius: 6em;
+    transition: all .2s;
+    border: none;
+    font-family: 'PT Serif', serif;
+    font-weight: 500;
+    color: black;
+
+    background-color: white;
+   }
+   
+   .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+   }
+   
+   .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   }
+   
+   .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+   }
+   
+   .btn::after {
+    background-color: #fff;
+   }
+   
+   .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+   }

@@ -1,11 +1,4 @@
-/* body{
-  background-image: url("./img/gente-comiendo-aperitivos-fondo-borroso_23-2148266931.webp"); 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  height: auto;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
 .App {
   text-align: center;
 }
@@ -44,3 +37,41 @@
     transform: rotate(360deg);
   }
 }
+
+.loader{
+background-color: #423f3da4;
+min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur 2px;
+ 
+}
+.loader1{
+  margin-top: 300px;
+}
+.loader span {
+
+ color: aliceblue;
+  margin-top: 400px;
+  font-size: 40px;
+  font-family: 'Water Brush', cursive;
+  font-weight: 600;
+  animation: blur 3s linear infinite;
+  line-height: 20px;
+  transition: all 0.5s;
+  letter-spacing: 0.2em;
+ }
+ 
+ @keyframes blur {
+  0%, 90% {
+   filter: blur(0);
+  }
+ 
+  50% {
+   filter: blur(10px);
+  }
+ }

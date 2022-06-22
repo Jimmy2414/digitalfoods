@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700|PT+Serif:400,400i,700');
+.loader1{
+  background-color: #252423cb;
+  min-height: 100%;
+      min-width: 1024px;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      backdrop-filter: blur 2px;
+    
+}
+.loader {
+
+  border: 0 solid transparent;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: 300px;
+  margin-left: 42%;
+  
+ }
+ .loader1 p{
+   font-size: 30px;
+ }
+ 
+ .loader::before,
+ .loader::after {
+  content: '';
+  border: 7px solid #ccc;
+  border-radius: 50%;
+  width: inherit;
+
+  height: inherit;
+  position: absolute;
+  animation: loader 2s linear infinite;
+  opacity: 0;
+ }
+ 
+ .loader::before {
+  animation-delay: 1s;
+ }
+ 
+ @keyframes loader {
+  0% {
+   transform: scale(1);
+   opacity: 0;
+  }
+ 
+  50% {
+   opacity: 1;
+  }
+ 
+  100% {
+   transform: scale(0);
+   opacity: 0;
+  }
+ }
+ .spinner {
+   margin-left: 40%;
+   margin-top: 2px;
+  height: 50px;
+  width: max-content;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'PT Serif', serif;
+  letter-spacing: 1em;
+  color: #f5f5f5;
+  filter: drop-shadow(0 0 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ 
+ .spinner span {
+  animation: loading6454 1.75s ease infinite;
+ }
+ 
+ .spinner span:nth-child(2) {
+  animation-delay: 0.25s;
+ }
+ 
+ .spinner span:nth-child(3) {
+  animation-delay: 0.5s;
+ }
+ 
+ .spinner span:nth-child(4) {
+  animation-delay: 0.75s;
+ }
+ 
+ .spinner span:nth-child(5) {
+  animation-delay: 1s;
+ }
+ 
+ .spinner span:nth-child(6) {
+  animation-delay: 1.25s;
+ }
+ 
+ .spinner span:nth-child(7) {
+  animation-delay: 1.5s;
+ }
+ .spinner span:nth-child(8) {
+  animation-delay: 1.75s;
+ }
+ .spinner span:nth-child(9) {
+  animation-delay: 2s;
+ }
+ .spinner span:nth-child(10) {
+  animation-delay: 2.25s;
+ }
+ .spinner span:nth-child(11) {
+  animation-delay: 2.5s;
+ }
+ .spinner span:nth-child(12) {
+  animation-delay: 2.75s;
+ }
+ .spinner span:nth-child(13) {
+  animation-delay: 3s;
+ }
+ .spinner span:nth-child(14) {
+  animation-delay: 3.25s;
+ }
+ .spinner span:nth-child(15) {
+  animation-delay: 3.75s;
+ }
+ 
+ @keyframes loading6454 {
+  0%, 100% {
+   transform: translateY(0);
+  }
+ 
+  50% {
+   transform: translateY(-10px);
+  }
+ }

@@ -101,19 +101,42 @@ transition: 0.5;
 .crear{
     margin-bottom: 30px;
 }
-.volver{
-    display: flex;
-    width: 100px;
-    border-radius: 20px;
-    color: aliceblue;
-   justify-content: center;
-text-decoration: none;
-margin-top: 20px;
-   background-color: rgba(87, 43, 9, 0.511);
-      cursor: pointer;
-      transition: 0.5s;
+.not{
+    text-decoration: none;
 }
-.volver:hover{
-    transform: scale(0.9);
-    transition: 0.5s;
+.volver {
+
+    display: flex;
+    height: 3em;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee4b;
+    border-radius: 15px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+   }
+   
+   .volver > svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+   }
+   
+   .volver:hover > svg {
+    font-size: 1.2em;
+    transform: translateX(-5px);
+   }
+   
+   .volver:hover {
+    background-color: #ccae929a;
+    transform: translateY(-2px);
+    color: #fff;
+   }
+.form .span p{
+    color: brown;
 }

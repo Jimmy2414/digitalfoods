@@ -1,36 +1,31 @@
-
-
-
 import Paginadofn from "./pagination";
 import s from '../../styles/home.module.css'
-
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getRecipesAll, getTypes } from '../actions/index'
-import Foods from '../home/foods';
+
 import Nabvar from "../Navbar";
-import Cards from "./cards";
+
 import Card from "./card";
 import { useState, useEffect } from "react";
 import SearchBar from "./searchbar";
+import Loader from "./loader";
+
+
 export default function Home() {
+    const[loader, setLoader] =useState(true)
     const [order, setOrder] = useState('')
     const [searchClick, setSearchClick] = useState(false) // estado local
     const dispatch = useDispatch()
     const getFood = useSelector((state) => state.recipesAll)
     const recipes = useSelector((state) => state.recipes)
     const typesAll = useSelector(state => state.types)
-    const [foodPerSearch] = useState(1)
-
     const [curretPage, setCurrentPage] = useState(1)
     const [foodsPerPage, setFoodsPerPage] = useState(9)
     const indexOfLastFoods = curretPage * foodsPerPage
     const indexOfFirstFoods = indexOfLastFoods - foodsPerPage
     const currentFoods = getFood.slice(indexOfFirstFoods, indexOfLastFoods)
 
-    // const paginado = (pageNumber) => {
-    //     setCurrentPage(pageNumber)
-    // }
+ 
     const paginado = (pageNumber) => {
         let page = curretPage;
         if (pageNumber === 'start') {
@@ -68,9 +63,10 @@ export default function Home() {
     }
 
     function search() {
+     
         setSearchClick(false)
      setTimeout(() => {setCurrentPage(1)},2000  )
-        
+    
 
     }
 
@@ -79,11 +75,12 @@ export default function Home() {
 
         const currentFoods = recipes.slice(indexOfFirstFoods, indexOfLastFoods)
       
-        console.log(currentFoods)
  
         return (
-
-
+<div>
+{loader === true?(
+    <Loader setLoader={setLoader}/>
+):(
             <div className={s.hidden}>
 
                 <div className={s.imagen1}> </div>
@@ -95,7 +92,7 @@ export default function Home() {
                       
                             />
                         <Nabvar typesAll={typesAll} setOrder={setOrder} setCurrentPage={setCurrentPage} />
-                        <button className={s.volveracargar} onClick={e => { getFoods(e) }} >
+                        <button className={s.btn} onClick={e => { getFoods(e) }} >
 
                             Reload Recipes ↺
 
@@ -120,7 +117,7 @@ export default function Home() {
                                             score={u.score}
                                             image={u.image || "https://www.knownhost.com/blog/wp-content/uploads/2017/11/404-Error-Message.jpg"}
                                             id={u.idApi ? u.idApi : u.id}
-                                            diets={u.diets}
+                                            diets={u.diets.length > 0? u.diets:["No contains diets"]}
                                             Dish={u.types ? u.types : "Not contains types food"}
                                             Steps={u.steps}
                                         />
@@ -135,6 +132,15 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+                <Paginadofn
+                            foodsPerPage={foodsPerPage}
+                            getFood={recipes.length}
+                            paginado={paginado}
+                            curretPage={curretPage }
+                        />
+            </div>
+)}
+
             </div>
         )
        
@@ -148,7 +154,7 @@ export default function Home() {
                 <SearchBar
                     search={search} />
                 <Nabvar typesAll={typesAll} setOrder={setOrder} setCurrentPage={setCurrentPage} />
-                <button className={s.volveracargar} onClick={e => { getFoods(e) }} >
+                <button className={s.btn} onClick={e => { getFoods(e) }} >
 
                     Reload Recipes ↺
 
@@ -184,11 +190,15 @@ export default function Home() {
 
 
                 </div>
+                <Paginadofn
+                            foodsPerPage={foodsPerPage}
+                            getFood={recipes.length}
+                            paginado={paginado}
+                            curretPage={curretPage }
+                        />
             </div>
-
+        
         </div>
     )
 }
 
-
-// export default connect(null, {getRecipesAll})(Home)
